@@ -9,19 +9,19 @@ spec:
 
   selector:
     matchLabels:
-      name: my-web-app
+      app: my-web-app
 
   template:
-  
     metadata:
       name: my-web-app
       labels: 
-        name: my-web-app
+        app: my-web-app
 
     spec:
       containers:
-        - image: yousseframadan/nginx-project
-          name: my-nginx-app
+        - name: my-nginx-app
+          image: yousseframadan/nginx-project
+          
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
@@ -32,5 +32,7 @@ spec:
             requests:
               memory: "100Mi" 
               cpu:  "1"
+
+
 
 
