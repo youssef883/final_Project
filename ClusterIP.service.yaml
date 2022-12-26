@@ -3,9 +3,9 @@ kind: Service
 metadata:
   name: nginx-cluster-ip
 spec: 
-  type: ClusterIp
+  type: ClusterIP
   selector: 
-    app: my-web-app
+    app: db
   ports:
     - port: 8080 # service port
       targetPort: 80 # pod/container
